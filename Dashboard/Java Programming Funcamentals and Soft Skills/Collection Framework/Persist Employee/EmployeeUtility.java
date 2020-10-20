@@ -19,6 +19,7 @@ public class EmployeeUtility {
         try {
             FileInputStream fileInputStream = new FileInputStream(fileName);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            @SuppressWarnings("unchecked")
             ArrayList<Employee> employees = (ArrayList<Employee>) objectInputStream.readObject();
 
             for (Employee employee : employees) {
